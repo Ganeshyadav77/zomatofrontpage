@@ -1,0 +1,168 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato pro· एडवांस फूड डिलीवरी</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- प्रोग्रेस बार -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- नेवबार -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-utensils"></i> zomato<span class="pro-text">pro</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="#delivery">Delivery</a>
+            <a href="#dining">Dining</a>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="user-icon">
+                <i class="fas fa-user-circle"></i>
+                <span>Sign in</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- हीरो सेक्शन -->
+    <section class="hero" id="home">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 id="typingText"></h1>
+                <p>Discover the best restaurants near you. From local favourites to global cuisines – we've got you covered.</p>
+                
+                <!-- काउंटडाउन टाइमर -->
+                <div class="timer-container">
+                    <div class="timer-box">
+                        <span class="timer-label">⏱️ ऑफर खत्म होने में</span>
+                        <div class="timer" id="timer">
+                            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-box">
+                    <i class="fas fa-map-pin"></i>
+                    <input type="text" placeholder="Enter delivery address" id="searchInput" />
+                    <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+            </div>
+            <div class="hero-image glass-effect">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f7f2f0'/%3E%3Ccircle cx='200' cy='130' r='80' fill='%23eb3e3222'/%3E%3Ccircle cx='200' cy='120' r='60' fill='%23eb3e3211'/%3E%3Cpath d='M140 160 Q200 80 260 160 L240 180 L160 180 L140 160' fill='%23eb3e32' opacity='0.2'/%3E%3Cpath d='M160 170 L240 170 L220 210 L180 210 L160 170' fill='%23eb3e32' opacity='0.15'/%3E%3Ccircle cx='170' cy='140' r='12' fill='%23eb3e32' opacity='0.3'/%3E%3Ccircle cx='230' cy='140' r='12' fill='%23eb3e32' opacity='0.3'/%3E%3C/svg%3E"
+                     alt="Zomato food illustration" />
+            </div>
+        </div>
+    </section>
+
+    <!-- कैटेगरीज -->
+    <h2 class="section-title">Explore <i class="fas fa-chevron-right" style="font-size: 22px; color: #eb3e32; margin-left: 8px;"></i></h2>
+    <p class="section-sub">Popular food categories</p>
+    <div class="card-grid" id="restaurants">
+        <div class="card" data-tooltip="12 restaurants available">
+            <i class="fas fa-pizza-slice"></i>
+            <h3>Pizza</h3>
+            <p>12 restaurants</p>
+        </div>
+        <div class="card" data-tooltip="9 restaurants available">
+            <i class="fas fa-hamburger"></i>
+            <h3>Burgers</h3>
+            <p>9 restaurants</p>
+        </div>
+        <div class="card" data-tooltip="7 restaurants available">
+            <i class="fas fa-fish"></i>
+            <h3>Seafood</h3>
+            <p>7 restaurants</p>
+        </div>
+        <div class="card" data-tooltip="15 restaurants available">
+            <i class="fas fa-mug-hot"></i>
+            <h3>Beverages</h3>
+            <p>15 restaurants</p>
+        </div>
+        <div class="card" data-tooltip="11 restaurants available">
+            <i class="fas fa-ice-cream"></i>
+            <h3>Desserts</h3>
+            <p>11 restaurants</p>
+        </div>
+    </div>
+
+    <!-- रेस्तरां -->
+    <h2 class="section-title" style="padding-top: 10px;">Popular restaurants <i class="fas fa-chevron-right" style="font-size: 22px; color: #eb3e32; margin-left: 8px;"></i></h2>
+    <p class="section-sub">Handpicked for you</p>
+    <div class="resto-grid" id="delivery">
+        <div class="resto-card">
+            <div class="resto-img"><i class="fas fa-utensil-spoon"></i></div>
+            <div class="resto-info">
+                <h4>La Piazza</h4>
+                <span class="rating">⭐ 4.7</span>
+                <p>Italian • 25-35 min</p>
+            </div>
+        </div>
+        <div class="resto-card">
+            <div class="resto-img"><i class="fas fa-drumstick-bite"></i></div>
+            <div class="resto-info">
+                <h4>Spice Garden</h4>
+                <span class="rating">⭐ 4.3</span>
+                <p>Indian • 20-30 min</p>
+            </div>
+        </div>
+        <div class="resto-card">
+            <div class="resto-img"><i class="fas fa-egg"></i></div>
+            <div class="resto-info">
+                <h4>Morning Brew</h4>
+                <span class="rating">⭐ 4.5</span>
+                <p>Cafe • 15-20 min</p>
+            </div>
+        </div>
+        <div class="resto-card">
+            <div class="resto-img"><i class="fas fa-bowl-food"></i></div>
+            <div class="resto-info">
+                <h4>Umami Ramen</h4>
+                <span class="rating">⭐ 4.8</span>
+                <p>Japanese • 30-40 min</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- लोडिंग स्पिनर -->
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+        <p>Loading amazing food...</p>
+    </div>
+
+    <!-- बैक टू टॉप बटन -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- फूटर -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <i class="fas fa-utensils"></i> zomato<span class="pro-text">pro</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+        <div class="footer-social">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
